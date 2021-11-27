@@ -68,6 +68,8 @@ class Watchy999 : public WatchyBase{
         void drawDoomWatchFace();
         //Slide Time
         void drawPebbleTextFace();
+        //Crazy Eyes
+        void drawCrazyEyesWatchFace();
         //Universal
         timeData getTimeDate();
         void drawWatchFace();

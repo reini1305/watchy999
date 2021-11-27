@@ -9,6 +9,7 @@
 #include "G5600.h"
 #include "pebbleText.h"
 #include "doom999.h"
+#include "crazyeyes.h"
 
 RTC_DATA_ATTR bool charging = false;
 RTC_DATA_ATTR bool chargeSync = false;
@@ -295,26 +296,42 @@ void Watchy999::drawWatchFace() {
 
   if (lowBattFace) { //Low Power Face
     drawLowBattWatchFace();
-  } else if (watchFace == 0) { //DKtime
-    drawDkWatchFace();
-  } else if (watchFace == 1) {//pxl999
-    drawPxlWatchFace();
-  } else if (watchFace == 2) { //Slides999
-    drawSlidesWatchFace();
-  } else if (watchFace == 3) { //Synth999
-    drawSynthWatchFace();
-  } else if (watchFace == 4) { //Crushem
-    drawCeWatchFace();
-  } else if (watchFace == 5) { //lowBatt
-    drawLowBattWatchFace();
-  } else if (watchFace == 6) { //Tetris
-    drawWatchytrisWatchFace();
-  } else if (watchFace == 7) { //G5600 by NiVZ
-    drawG5600WatchFace();
-  } else if (watchFace == 8) { //Slide Time by Pebble
-    drawPebbleTextFace();
-  } else if (watchFace == 9) { //Doom999
-    drawDoomWatchFace();
+  } else {
+    switch (watchFace) {
+      case 0: //DKtime
+        drawDkWatchFace();
+        break;
+      case 1: //pxl999
+        drawPxlWatchFace();
+        break;
+      case 2: //Slides999
+        drawSlidesWatchFace();
+        break;
+      case 3: //Synth999
+        drawSynthWatchFace();
+        break;
+      case 4: //Crushem
+        drawCeWatchFace();
+        break;
+      case 5: //lowBatt
+        drawLowBattWatchFace();
+        break;
+      case 6: //Tetris
+        drawWatchytrisWatchFace();
+        break;
+      case 7: //G5600 by NiVZ
+        drawG5600WatchFace();
+        break;
+      case 8: //Slide Time by Pebble
+        drawPebbleTextFace();
+        break;
+      case 9: //Doom999
+        drawDoomWatchFace();
+        break;
+      case 10: //Crazy Eyes
+        drawCrazyEyesWatchFace();
+        break;
+    }
   }
   
   if (debugger)
