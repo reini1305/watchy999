@@ -593,7 +593,7 @@ void WatchyBase::watchfaceApp() {
   display.setTextColor(GxEPD_WHITE);
   display.fillScreen(GxEPD_BLACK);
 
-  char *listItems[] = {"DKtime", "pxl", "slides", "synth", "Crush Em", "lowBatt", "Watchytris", "G5600 by NiVZ", "Pebble", "Doom999"};
+  char *listItems[] = {"DKtime", "pxl", "slides", "synth", "Crush Em", "lowBatt", "Watchytris", "G5600 by NiVZ", "Pebble", "Doom999", "Crazy Eyes"};
   byte itemCount = sizeof(listItems) / sizeof(listItems[0]);
 
   uint16_t listIndex = watchFace;
